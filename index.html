@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catálogo de Clientes</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Supabase CDN JS SDK -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+
+  <div class="container">
+    <h2>CATÁLOGO DE CLIENTES</h2>
+
+    <form id="clienteForm">
+      <div class="form-group">
+        <label for="clave">Clave:</label>
+        <input type="text" id="clave" required>
+      </div>
+
+      <div class="form-group">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" required>
+      </div>
+
+      <div class="form-group">
+        <label for="edad">Edad:</label>
+        <input type="number" id="edad">
+      </div>
+
+      <div class="form-group">
+        <label for="fecha_nacimiento">Fecha nacimiento:</label>
+        <input type="date" id="fecha_nacimiento">
+      </div>
+
+      <div class="buttons">
+        <button type="button" id="btnNuevo">Nuevo</button>
+        <button type="submit" id="btnGuardar">Guardar</button>
+        <button type="button" id="btnEliminar">Eliminar</button>
+      </div>
+    </form>
+
+    <div class="table-container">
+      <table>
+        <thead>
+          <tr>
+            <th>Clave</th>
+            <th>Nombre</th>
+          </tr>
+        </thead>
+        <tbody id="tablaClientes">
+          <!-- Filas dinámicas -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
